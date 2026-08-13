@@ -3,8 +3,7 @@ import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import ArduinoBoard from '../components/ArduinoBoard.jsx'
 import Board3D from '../components/Board3D.jsx'
-import ComponentInfo from '../components/ComponentInfo.jsx'
-import PartInfoCard from '../components/PartInfoCard.jsx'
+import PartDialog from '../components/PartDialog.jsx'
 import { components } from '../data/arduinoComponents.js'
 import { devices } from '../data/devices.js'
 import { Check, MousePointerClick } from 'lucide-react'
@@ -12,8 +11,13 @@ import { Check, MousePointerClick } from 'lucide-react'
 const realDevices = devices.filter((d) => d.id !== 'arduino')
 
 export default function Components() {
-  const [selectedPart, setSelectedPart] = useState(null)
-  const [selectedDevicePart, setSelectedDevicePart] = useState(null)
+  const [popover, setPopover] = useState(null)
+
+  const openArduino = (part, e) =>
+    setPopover({ part, eyebrow: 'Arduino Uno · Part', x: e.clientX, y: e.clientY })
+
+  const openDevice = (device) => (part, e) =>
+    setPopover({ part, eyebrow: `${device.full} · Part`, x: e.clientX, y: e.clientY })
 
   return (
     <>
@@ -40,26 +44,26 @@ export default function Components() {
               Anatomy of the <span className="grad">Arduino Board</span>
             </h2>
             <p className="section-desc">
-              Click any part of the board — or a chip below — to open its details.
+              Click any part of the board — or a chip below — to open a small details box.
             </p>
           </div>
 
           <div className="comp-board-card glass reveal">
-            <ArduinoBoard onSelect={setSelectedPart} />
+            <ArduinoBoard onSelect={openArduino} />
             <span className="comp-board-name">Arduino Uno</span>
             <div className="comp-part-chips">
               {components.map((c) => (
                 <button
                   key={c.id}
                   className="comp-part-chip"
-                  onClick={() => setSelectedPart(c)}
+                  onClick={(e) => openArduino(c, e)}
                 >
                   {c.name}
                 </button>
               ))}
             </div>
             <div className="comp-board-hint">
-              <MousePointerClick size={15} /> Click a part to explore it
+              <MousePointerClick size={15} /> Click a part to see its details
             </div>
           </div>
         </div>
@@ -82,11 +86,7 @@ export default function Components() {
             {realDevices.map((d, i) => (
               <div key={d.id} className={`comp-device-card glass reveal reveal-delay-${i % 2}`}>
                 <div className="comp-device-stage">
-                  <Board3D
-                    device={d}
-                    onSelect={setSelectedDevicePart}
-                    selectedId={selectedDevicePart?.id}
-                  />
+                  <Board3D device={d} onSelect={openDevice(d)} selectedId={null} />
                 </div>
                 <div className="comp-device-body">
                   <div className="comp-device-head">
@@ -119,10 +119,13 @@ export default function Components() {
 
       <Footer />
 
-      <ComponentInfo component={selectedPart} onClose={() => setSelectedPart(null)} />
-      {selectedDevicePart && (
-        <PartInfoCard part={selectedDevicePart} onClose={() => setSelectedDevicePart(null)} />
-      )}
+      <PartDialog
+        part={popover?.part}
+        eyebrow={popover?.eyebrow}
+        x={popover?.x}
+        y={popover?.y}
+        onClose={() => setPopover(null)}
+      />
     </>
   )
 }

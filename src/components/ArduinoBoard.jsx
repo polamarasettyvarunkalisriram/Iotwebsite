@@ -111,7 +111,7 @@ function BoardPart({ comp, index, selected, onSelect, transformStyle, labelVisib
       }}
       onClick={(e) => {
         e.stopPropagation()
-        onSelect && onSelect(comp)
+        onSelect && onSelect(comp, e)
       }}
     >
       <PartVisual variant={comp.variant} />

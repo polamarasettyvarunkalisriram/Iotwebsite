@@ -3,7 +3,7 @@
    ============================================================ */
 .hero {
   position: relative;
-  padding: 100px 0 0;
+  padding: 0px 0 0;
   overflow: hidden;
   min-height: calc(100dvh - var(--nav-h));
   display: flex;
@@ -102,9 +102,9 @@
 
 .hero-board {
   width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 24px 24px 48px;
+  /* max-width: 1120px; */
+  margin: 0px auto;
+  padding: 127px 24px 48px;
   animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both;
 }
 
