@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useState } from 'react'
 import Board3D from './Board3D.jsx'
 import PartInfoCard from './PartInfoCard.jsx'
 import { devices } from '../data/devices.js'
@@ -8,42 +8,17 @@ import {
   ChevronRight
 } from 'lucide-react'
 
-const AUTO_MS = 5000
-
 export default function DeviceCarousel({ active, onActive }) {
   const [dis, setDis] = useState(false)
   const [sel, setSel] = useState(null)
-  const paused = useRef(false)
-  const [hovered, setHovered] = useState(false)
 
   const device = devices[active]
-
-  // Auto change every 5 seconds
-  useEffect(() => {
-    const t = setInterval(() => {
-      if (paused.current) return
-
-      onActive((a) => (a + 1) % devices.length)
-    }, AUTO_MS)
-
-    return () => clearInterval(t)
-  }, [onActive])
 
   // Reset when device changes
   useEffect(() => {
     setDis(false)
     setSel(null)
   }, [active])
-
-  const pause = () => {
-    paused.current = true
-    setHovered(true)
-  }
-
-  const resume = () => {
-    paused.current = false
-    setHovered(false)
-  }
 
   // Previous
   const prev = () => {
@@ -62,10 +37,6 @@ export default function DeviceCarousel({ active, onActive }) {
   return (
     <div
       className="device-carousel"
-      onMouseEnter={pause}
-      onMouseLeave={resume}
-      onTouchStart={pause}
-      onTouchEnd={resume}
       style={{
         position: 'relative',
         width: '100%'
@@ -251,27 +222,7 @@ export default function DeviceCarousel({ active, onActive }) {
         <MousePointerClick size={16} />
 
         Hover the device to disassemble it · click a part
-        to open its details · switches device every 5s
-      </div>
-
-
-      {/* ==============================
-          DOTS
-      =============================== */}
-
-      <div className="device-dots">
-        {devices.map((d, i) => (
-          <button
-            key={d.id}
-            className={`dot${
-              active === i ? ' active' : ''
-            }${
-              active === i && hovered ? ' paused' : ''
-            }`}
-            onClick={() => onActive(i)}
-            aria-label={`Show ${d.name}`}
-          />
-        ))}
+        to open its details · use the arrows to switch devices
       </div>
 
 
