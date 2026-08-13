@@ -10,10 +10,6 @@ export default function Advantages() {
           <h2 className="section-title">
             Advantages & <span className="grad">Disadvantages</span>
           </h2>
-          <p className="section-desc">
-            These boards are brilliant for learning and prototyping — but they also have limits.
-            Knowing both helps you choose the right tool for every project.
-          </p>
         </div>
 
         <div className="adv-grid">

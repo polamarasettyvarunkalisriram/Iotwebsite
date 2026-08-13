@@ -13,7 +13,7 @@ export default function IoTApplications() {
           </h2>
           <p className="section-desc">
             Microcontrollers and single-board computers are the gateway to the Internet of Things.
-            Here are ten ways they power connected devices in the real world.
+            Here are six ways they power connected devices in the real world.
           </p>
         </div>
 

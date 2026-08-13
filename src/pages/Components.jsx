@@ -38,16 +38,6 @@ export default function Components() {
 
       <section className="comp-arduino section">
         <div className="container">
-          <div className="section-head center reveal">
-            <span className="section-eyebrow">Arduino Uno</span>
-            <h2 className="section-title">
-              Anatomy of the <span className="grad">Arduino Board</span>
-            </h2>
-            <p className="section-desc">
-              Click any part of the board — or a chip below — to open a small details box.
-            </p>
-          </div>
-
           <div className="comp-board-card glass reveal">
             <ArduinoBoard onSelect={openArduino} />
             <span className="comp-board-name">Arduino Uno</span>

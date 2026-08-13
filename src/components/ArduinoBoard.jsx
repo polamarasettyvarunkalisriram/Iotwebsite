@@ -148,11 +148,7 @@ export default function ArduinoBoard({
       <span className="silk silk-u digital">DIGITAL (PWM~)</span>
       <span className="silk silk-u analog">ANALOG IN</span>
       <span className="silk silk-u power">POWER</span>
-      <span className="silk silk-u reset">RESET</span>
       <span className="silk silk-u icsp">ICSP</span>
-      <span className="silk silk-u leds">TX·RX·L</span>
-      <span className="silk silk-u pwr">PWR</span>
-      <span className="silk silk-u vreg">REG</span>
       <span className="silk silk-u usb">USB</span>
 
       {parts.map((comp, i) => {

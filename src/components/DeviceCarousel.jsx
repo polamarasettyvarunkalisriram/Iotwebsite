@@ -35,6 +35,7 @@ export default function DeviceCarousel({ active, onActive }) {
   }
 
   return (
+    
     <div
       className="device-carousel"
       style={{
