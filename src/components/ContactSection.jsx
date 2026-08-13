@@ -4,14 +4,14 @@ const contacts = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'hello@arduinoiotexplorer.dev',
-    href: 'mailto:hello@arduinoiotexplorer.dev',
+    value: 'srirampksrirampk@gmail.com',
+    href: 'mailto:srirampksrirampk@gmail.com',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+1 (555) 010-2030',
-    href: 'tel:+15550102030',
+    value: '+91 93981 71713',
+    href: 'tel:+919398171713',
   },
   {
     icon: MapPin,
@@ -61,7 +61,7 @@ export default function ContactSection() {
         </div>
 
         <div className="about-home-cta reveal">
-          <a href="mailto:hello@arduinoiotexplorer.dev" className="btn btn-primary">
+          <a href="mailto:srirampksrirampk@gmail.com" className="btn btn-primary">
             Send us a Message <Send size={17} />
           </a>
         </div>

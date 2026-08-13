@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from 'react-router-dom'
 import { ArrowUp } from 'lucide-react'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Components from './pages/Components.jsx'
 import Contact from './pages/Contact.jsx'
 
 function useRevealObserver() {
@@ -76,6 +77,7 @@ export default function App() {
         <Routes location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/components" element={<Components />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<Home />} />
         </Routes>

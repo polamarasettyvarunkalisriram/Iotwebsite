@@ -65,6 +65,15 @@ const pi = {
     ['40', 'GPIO Pins'],
     ['4', 'USB Ports'],
   ],
+  real: 'The Raspberry Pi is a complete computer on a board. It powers real products and services everywhere — from living-room media centers to factory dashboards.',
+  realWorld: [
+    'Media centers streaming movies to a TV',
+    'Home servers and NAS boxes running 24/7',
+    'Digital signage and wall-mounted dashboards',
+    'Robotics and automation with the GPIO header',
+    'Smart-home hubs controlling lights and cameras',
+    'Classroom computers for learning to code',
+  ],
   silks: [
     { t: 'RASPBERRY PI', x: 40, y: 52, a: 0, s: 11, ls: 2 },
     { t: '4 MODEL B', x: 40, y: 58, a: 0, s: 8, ls: 3 },
@@ -560,6 +569,15 @@ const esp32 = {
     ['34', 'GPIO Pins'],
     ['Wi-Fi', '+ BLE'],
   ],
+  real: 'The ESP32 is the tiny chip inside millions of connected products — anything that needs Wi-Fi or Bluetooth on a budget.',
+  realWorld: [
+    'Smart plugs, switches and energy monitors',
+    'Battery-powered environmental sensor nodes',
+    'Home-automation relays and smart irrigation',
+    'Wearable trackers and fitness devices',
+    'Industrial monitoring and machine health alerts',
+    'IoT dashboards streaming live data over MQTT',
+  ],
   silks: [
     { t: 'ESP32', x: 34, y: 50, a: 0, s: 12, ls: 3 },
     { t: 'DEVKIT', x: 34, y: 56, a: 0, s: 8, ls: 3 },
@@ -921,6 +939,15 @@ const stm32 = {
     ['48', 'GPIO Pins'],
     ['USB-C', 'Programming'],
   ],
+  real: 'The STM32 family runs inside a huge share of everyday electronics — from e-bikes and drones to medical tools and USB gadgets.',
+  realWorld: [
+    'Motor control in e-bikes, drones and robots',
+    'Automotive body and engine control units',
+    'USB devices — gamepads, keyboards and audio',
+    'Printers, scanners and lab instruments',
+    'Medical monitoring and handheld diagnostics',
+    'Industrial PLCs and sensor interfaces',
+  ],
   silks: [
     { t: 'STM32', x: 35, y: 14, a: 0, s: 9, ls: 3 },
     { t: 'F411 BLACK PILL', x: 35, y: 20, a: 0, s: 7, ls: 2 },
@@ -1277,6 +1304,15 @@ const beaglebone = {
     ['512MB', 'RAM'],
     ['92', 'GPIO Pins'],
     ['4GB', 'eMMC'],
+  ],
+  real: 'The BeagleBone is an open-source Linux computer built for industrial and robotics work, where precise real-time control matters.',
+  realWorld: [
+    'Robotics controllers using the real-time PRU cores',
+    'Industrial data acquisition and PLC-style control',
+    'CNC machines and 3D-printer controllers',
+    'Laboratory instruments and test rigs',
+    'Teaching Linux and embedded systems in universities',
+    'Always-on hubs for home and factory automation',
   ],
   silks: [
     { t: 'BEAGLEBONE', x: 32, y: 12, a: 0, s: 10, ls: 2 },

@@ -495,47 +495,6 @@ export const components = [
     labelPos: 'left',
     color: '#e8930c',
   },
-  {
-    id: 'icsp',
-    name: 'ICSP Header',
-    short: 'The ICSP header is a direct programming port for advanced users.',
-    howTo: [
-      'Connect an AVR programmer (or another Arduino set as ISP) to the header',
-      'Select the programmer in the Arduino IDE, then burn the bootloader or upload a sketch',
-      'Use it only when USB-based uploads are not available',
-    ],
-    what: 'The In-Circuit Serial Programming (ICSP) header gives direct access to the SPI programming pins of the microcontroller. It allows you to program the chip with an external programmer or burn a fresh bootloader.',
-    uses: [
-      'Uploading sketches with an external programmer',
-      'Burning or repairing the Arduino bootloader',
-      'Direct SPI access for advanced projects',
-    ],
-    advantages: [
-      'Bypasses the USB interface entirely',
-      'Lets you recover or upgrade the bootloader',
-      'Direct access for low-level experimentation',
-    ],
-    disadvantages: [
-      'Requires extra hardware (AVR programmer)',
-      'Not needed for typical projects',
-      'Confusing pin numbering for beginners',
-    ],
-    examples: [
-      'Repairing a bricked board by re-burning the bootloader',
-      'Programming a raw ATmega328P for a custom PCB',
-    ],
-    icon: 'Cable',
-    variant: 'icsp',
-    x: 7,
-    y: 34,
-    w: 9,
-    h: 8,
-    offX: -170,
-    offY: 20,
-    stage: 5,
-    labelPos: 'left',
-    color: '#0aa7c7',
-  },
 ]
 
 export const iotApplications = [
@@ -602,13 +561,6 @@ export const iotApplications = [
     example: 'Heart-rate and temperature sensors send readings to a mobile app for family care.',
     icon: 'HeartPulse',
   },
-  {
-    id: 'energy',
-    name: 'Energy Monitoring',
-    short: 'Measure power usage and optimize consumption.',
-    example: 'Current sensors calculate appliance power draw and identify energy-hungry devices.',
-    icon: 'BatteryCharging',
-  },
 ]
 
 export const advantages = [
@@ -617,9 +569,6 @@ export const advantages = [
   'Open-source hardware and software ecosystem',
   'Large, helpful global community',
   'Hundreds of compatible sensors and modules',
-  'Simple programming with the Arduino IDE',
-  'Excellent for rapid prototyping',
-  'Perfect for IoT education and experiments',
 ]
 
 export const disadvantages = [
