@@ -29,7 +29,7 @@ const contacts = [
   {
     icon: MapPin,
     label: 'Location',
-    value: 'Innovation Hub, Makers City',
+    value: 'Vishakaptanam',
     href: null,
   },
 ]

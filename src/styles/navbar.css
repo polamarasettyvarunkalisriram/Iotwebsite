@@ -2,12 +2,18 @@
   position: sticky;
   top: 0;
   z-index: 900;
-  height: var(--nav-h);
+  height: 70px;
+  min-height: 70px;
+  max-height: 70px;
+  box-sizing: border-box;
+
   display: flex;
   align-items: center;
+
   background: var(--nav-bg);
   backdrop-filter: blur(18px) saturate(150%);
   -webkit-backdrop-filter: blur(18px) saturate(150%);
+
   border-bottom: 1px solid var(--border);
   transition: box-shadow 0.3s ease;
 }
