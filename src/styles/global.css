@@ -345,11 +345,11 @@ img, svg {
 /* ---- Scroll to top button ---- */
 .scroll-top-btn {
   position: fixed;
-  right: 26px;
-  bottom: 26px;
+  right: max(5px, env(safe-area-inset-right, 0px));
+  bottom: max(5px, env(safe-area-inset-bottom, 0px));
   z-index: 950;
-  width: 48px;
-  height: 48px;
+  width: clamp(42px, 5vw, 54px);
+  height: clamp(42px, 5vw, 54px);
   border-radius: 14px;
   display: grid;
   place-items: center;
@@ -374,12 +374,26 @@ img, svg {
   box-shadow: 0 12px 32px rgba(9, 26, 38, 0.4), 0 0 22px var(--glow-red);
 }
 
-@media (max-width: 560px) {
+@media (min-width: 601px) {
   .scroll-top-btn {
-    right: 16px;
-    bottom: 16px;
-    width: 44px;
-    height: 44px;
+    right: max(20px, env(safe-area-inset-right, 0px));
+    bottom: max(20px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (min-width: 1025px) {
+  .scroll-top-btn {
+    right: max(26px, env(safe-area-inset-right, 0px));
+    bottom: max(26px, env(safe-area-inset-bottom, 0px));
+  }
+}
+
+@media (max-width: 360px) {
+  .scroll-top-btn {
+    right: max(5px, env(safe-area-inset-right, 0px));
+    bottom: max(5px, env(safe-area-inset-bottom, 0px));
+    width: 40px;
+    height: 40px;
   }
 }
 
