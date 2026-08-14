@@ -194,7 +194,8 @@ export default function PartInfoCard({ part, onClose }) {
           inset: 0,
 
           width: '100vw',
-          height: '100vh',
+          height: '100dvh',
+          minHeight: '100vh',
 
           zIndex: 99999,
 
@@ -240,17 +241,18 @@ export default function PartInfoCard({ part, onClose }) {
 
             width: isMobile
               ? '100vw'
-              : '48vw',
+              : '40vw',
 
             maxWidth: isMobile
               ? '100vw'
-              : '760px',
+              : '620px',
 
             minWidth: isMobile
               ? '0'
-              : '560px',
+              : '470px',
 
-            height: '100vh',
+            height: '100dvh',
+            minHeight: '100vh',
 
             flexShrink: 0,
 
