@@ -191,7 +191,7 @@ function BoardPart({ comp, index, selected, onSelect, transformStyle, labelVisib
   )
 }
 
-export default function Board3D({ device, disassembled, onSelect, selectedId }) {
+export default function Board3D({ device, disassembled, onSelect, selectedId, labelVisible }) {
   const sceneRef = useRef(null)
 
   const handleMove = (e) => {
@@ -258,7 +258,7 @@ export default function Board3D({ device, disassembled, onSelect, selectedId }) 
                 selected={comp.id === selectedId}
                 onSelect={onSelect}
                 transformStyle={transformFor(comp, i)}
-                labelVisible={disassembled}
+                labelVisible={labelVisible ?? disassembled}
               />
             ))}
           </div>

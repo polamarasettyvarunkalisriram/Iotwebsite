@@ -1,12 +1,8 @@
-import { useState } from 'react'
-import { devices } from '../data/devices.js'
-import DeviceCarousel from './DeviceCarousel.jsx'
+import { iotboard } from '../data/devices.js'
+import ExplodedBoard3D from './ExplodedBoard3D.jsx'
 import { Cpu } from 'lucide-react'
 
 export default function Hero() {
-  const [active, setActive] = useState(0)
-  const device = devices[active]
-
   const scrollTo = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
   }
@@ -15,7 +11,8 @@ export default function Hero() {
     <>
       <section className="hero">
         <div className="hero-board">
-          <DeviceCarousel active={active} onActive={setActive} />
+          <h2 className="hero-board-title">Multi MCU IoT Development Board</h2>
+          <ExplodedBoard3D />
         </div>
       </section>
 
@@ -26,9 +23,8 @@ export default function Hero() {
             Explore the <span className="grad">Brains of IoT</span>
           </h1>
           <p className="hero-sub">
-            Meet the three devices that power the Internet of Things — a microcontroller, a
-            single-board computer and a wireless chip. Click any part to take it apart and learn
-            how it works.
+            A single IoT development board that powers the Internet of Things — sense, think and
+            connect with every project you build.
           </p>
 
           <div className="hero-actions">
@@ -38,7 +34,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-stats">
-            {device.stats.map(([v, l]) => (
+            {iotboard.stats.map(([v, l]) => (
               <div className="stat" key={l}>
                 <span className="stat-value">{v}</span>
                 <span className="stat-label">{l}</span>

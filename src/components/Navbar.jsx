@@ -126,6 +126,12 @@ export default function Navbar() {
             Components
           </NavLink>
           <NavLink
+            to="/boards"
+            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+          >
+            Explorer
+          </NavLink>
+          <NavLink
             to="/contact"
             onClick={(e) => handleSectionNav(e, 'contact', '/contact')}
             className={({ isActive }) =>

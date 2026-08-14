@@ -8,6 +8,7 @@ import './styles/home.css'
 import './styles/arduino.css'
 import './styles/about.css'
 import './styles/components.css'
+import './styles/boards.css'
 import './styles/contact.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

@@ -1059,6 +1059,23 @@
   background-image: radial-gradient(rgba(120, 220, 170, 0.1) 1px, transparent 1px);
 }
 
+/* IoT motherboard — dark cyan PCB */
+.arduino-board.pcb-iot {
+  background:
+    radial-gradient(140% 90% at 18% 12%, rgba(10, 167, 189, 0.14), transparent 55%),
+    radial-gradient(90% 60% at 85% 90%, rgba(224, 24, 156, 0.06), transparent 60%),
+    linear-gradient(150deg, #0c2a33 0%, #081d24 45%, #041218 100%);
+  border-color: rgba(10, 167, 189, 0.55);
+  box-shadow:
+    inset 0 0 42px rgba(0, 0, 0, 0.55),
+    0 30px 70px rgba(0, 0, 0, 0.55),
+    0 0 46px rgba(10, 167, 189, 0.14);
+}
+
+.arduino-board.pcb-iot::before {
+  background-image: radial-gradient(rgba(10, 167, 189, 0.14) 1px, transparent 1px);
+}
+
 .silk.dev-silk {
   transform: translate(-50%, -50%);
   transform-origin: center;
