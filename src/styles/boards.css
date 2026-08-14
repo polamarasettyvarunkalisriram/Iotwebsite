@@ -302,6 +302,11 @@
   padding-bottom: 90px;
 }
 
+.explorer-devices {
+  padding-top: 70px;
+  text-align: center;
+}
+
 .explorer-stage .board-viewer {
   height: 680px;
 }

@@ -4,7 +4,7 @@ import { ArrowRight, Lightbulb } from 'lucide-react'
 
 export default function ComponentExplorer({ onSelect }) {
   return (
-    <section id="components" className="section explorer-section">
+    <section id="components-grid" className="section explorer-section">
       <div className="container">
         <div className="section-head center reveal">
           <span className="section-eyebrow">Anatomy of the Board</span>

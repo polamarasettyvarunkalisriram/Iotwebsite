@@ -25,6 +25,8 @@ export default function Navbar() {
     }
     const sections = [
       ['about', 'about'],
+      ['explorer', 'explorer'],
+      ['components', 'components'],
       ['contact', 'contact'],
     ]
     let raf
@@ -121,13 +123,19 @@ export default function Navbar() {
           </NavLink>
           <NavLink
             to="/components"
-            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+            onClick={(e) => handleSectionNav(e, 'components', '/components')}
+            className={({ isActive }) =>
+              `nav-link${isActiveLink(isActive, 'components') ? ' active' : ''}`
+            }
           >
             Components
           </NavLink>
           <NavLink
             to="/boards"
-            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+            onClick={(e) => handleSectionNav(e, 'explorer', '/boards')}
+            className={({ isActive }) =>
+              `nav-link${isActiveLink(isActive, 'explorer') ? ' active' : ''}`
+            }
           >
             Explorer
           </NavLink>

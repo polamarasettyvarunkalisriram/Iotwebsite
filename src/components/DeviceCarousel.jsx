@@ -3,7 +3,6 @@ import Board3D from './Board3D.jsx'
 import PartInfoCard from './PartInfoCard.jsx'
 import { devices } from '../data/devices.js'
 import {
-  MousePointerClick,
   ChevronLeft,
   ChevronRight
 } from 'lucide-react'
@@ -126,28 +125,6 @@ export default function DeviceCarousel({ active, onActive }) {
             {d.name}
           </button>
         ))}
-      </div>
-
-
-      {/* ==============================
-          DEVICE META
-      =============================== */}
-
-      <div className="device-meta">
-        <h3>{device.full}</h3>
-        <span>{device.tag}</span>
-      </div>
-
-
-      {/* ==============================
-          SCENE HINT
-      =============================== */}
-
-      <div className="scene-hint">
-        <MousePointerClick size={16} />
-
-        Hover the device to disassemble it · click a part
-        to open its details · use the arrows to switch devices
       </div>
 
 

@@ -10,10 +10,7 @@
   flex-direction: column;
   justify-content: center;
   border-bottom: 1px solid var(--border);
-  background:
-    radial-gradient(120% 90% at 50% -10%, rgba(10, 167, 189, 0.16), transparent 55%),
-    radial-gradient(90% 70% at 85% 110%, rgba(224, 24, 156, 0.1), transparent 60%),
-    linear-gradient(180deg, var(--bg) 0%, var(--hero-fade) 100%);
+  background: var(--bg);
 }
 
 .hero::before {
@@ -173,6 +170,19 @@
     opacity: 0.35;
     transform: scale(0.8);
   }
+}
+
+/* Embedded explorer sections (Home page) */
+.explorer-hero {
+  padding-top: 80px;
+}
+
+.explorer-stage {
+  padding-top: 10px;
+}
+
+.explorer-stage .board-viewer {
+  height: 620px;
 }
 
 /* ============================================================

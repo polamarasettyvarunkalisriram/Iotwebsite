@@ -1,10 +1,14 @@
+import { useState } from 'react'
 import Navbar from '../components/Navbar.jsx'
 import Footer from '../components/Footer.jsx'
 import BoardViewer from '../components/BoardViewer.jsx'
+import DeviceCarousel from '../components/DeviceCarousel.jsx'
 import { iotboard } from '../data/devices.js'
 import { compareBoards, compareRows } from '../data/compare.js'
 
 export default function Boards() {
+  const [active, setActive] = useState(0)
+
   return (
     <>
       <Navbar />
@@ -20,6 +24,10 @@ export default function Boards() {
             details, and disassemble the board to see every brain inside.
           </p>
         </div>
+      </section>
+
+      <section className="explorer-devices container">
+        <DeviceCarousel active={active} onActive={setActive} />
       </section>
 
       <section className="explorer-stage container">
