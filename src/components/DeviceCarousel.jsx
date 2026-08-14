@@ -82,45 +82,7 @@ export default function DeviceCarousel({ active, onActive }) {
           onClick={prev}
           aria-label="Previous device"
           title="Previous device"
-          style={{
-            position: 'absolute',
-            left: '20px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-
-            width: '50px',
-            height: '50px',
-
-            border: 'none',
-            borderRadius: '50%',
-
-            background: 'linear-gradient(135deg, var(--cyan), var(--accent))',
-            color: '#fff',
-
-            boxShadow: '0 6px 18px rgba(224, 24, 156, 0.35), 0 0 14px var(--glow-cyan)',
-
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-
-            cursor: 'pointer',
-
-            zIndex: 100,
-
-            transition: 'all 0.2s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background =
-              'linear-gradient(135deg, #0cc3dd, #f02ab0)'
-            e.currentTarget.style.transform =
-              'translateY(-50%) scale(1.1)'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background =
-              'linear-gradient(135deg, var(--cyan), var(--accent))'
-            e.currentTarget.style.transform =
-              'translateY(-50%)'
-          }}
+          className="device-nav device-nav-prev"
         >
           <ChevronLeft size={30} strokeWidth={2.5} />
         </button>
@@ -134,45 +96,7 @@ export default function DeviceCarousel({ active, onActive }) {
           onClick={next}
           aria-label="Next device"
           title="Next device"
-          style={{
-            position: 'absolute',
-            right: '20px',
-            top: '50%',
-            transform: 'translateY(-50%)',
-
-            width: '50px',
-            height: '50px',
-
-            border: 'none',
-            borderRadius: '50%',
-
-            background: 'linear-gradient(135deg, var(--cyan), var(--accent))',
-            color: '#fff',
-
-            boxShadow: '0 6px 18px rgba(224, 24, 156, 0.35), 0 0 14px var(--glow-cyan)',
-
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-
-            cursor: 'pointer',
-
-            zIndex: 100,
-
-            transition: 'all 0.2s ease'
-          }}
-          onMouseEnter={(e) => {
-            e.currentTarget.style.background =
-              'linear-gradient(135deg, #0cc3dd, #f02ab0)'
-            e.currentTarget.style.transform =
-              'translateY(-50%) scale(1.1)'
-          }}
-          onMouseLeave={(e) => {
-            e.currentTarget.style.background =
-              'linear-gradient(135deg, var(--cyan), var(--accent))'
-            e.currentTarget.style.transform =
-              'translateY(-50%)'
-          }}
+          className="device-nav device-nav-next"
         >
           <ChevronRight size={30} strokeWidth={2.5} />
         </button>
