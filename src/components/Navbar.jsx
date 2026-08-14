@@ -25,7 +25,6 @@ export default function Navbar() {
     }
     const sections = [
       ['about', 'about'],
-      ['explorer', 'explorer'],
       ['components', 'components'],
       ['contact', 'contact'],
     ]

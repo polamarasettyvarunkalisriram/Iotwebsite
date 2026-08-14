@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar.jsx'
 import Hero from '../components/Hero.jsx'
 import AboutSection from '../components/AboutSection.jsx'
 import AssemblyAnimation from '../components/AssemblyAnimation.jsx'
-import BoardViewer from '../components/BoardViewer.jsx'
 import ArduinoBoard from '../components/ArduinoBoard.jsx'
 import Board3D from '../components/Board3D.jsx'
 import ComponentExplorer from '../components/ComponentExplorer.jsx'
@@ -36,23 +35,6 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <AssemblyAnimation onSelect={setSelected} selectedId={selected?.id} />
-
-      <section className="explorer-hero" id="explorer">
-        <div className="container">
-          <span className="section-eyebrow">Interactive 3D Laboratory</span>
-          <h2 className="explorer-title">
-            Explore the <span className="grad">IoT Board</span>
-          </h2>
-          <p className="explorer-sub">
-            Rotate the board, hover a module to identify it, click to read its details, and
-            disassemble the board to see every brain inside.
-          </p>
-        </div>
-      </section>
-
-      <section className="explorer-stage container">
-        <BoardViewer />
-      </section>
 
       <section className="comp-arduino section" id="components">
         <div className="container">
